@@ -1,0 +1,14 @@
+.task2 {
+  background-color: teal;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 20px;
+}
+.li-item-task2 {
+  flex-basis: calc((100% - 40px) / 3);
+}
+.img-item-task2 {
+  width: 320px;
+  height: auto;
+}
