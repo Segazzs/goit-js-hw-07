@@ -26,17 +26,11 @@ const images = [
     alt: "Lighthouse Coast Sea",
   },
 ];
+const markup = images
+  .map(
+    (elem) =>
+      `<li class="li-item-task2"><img class="img-item-task2" src="${elem.url}" alt="${elem.alt}"></li>`
+  )
+  .join("");
 
-images.forEach((elem) => {
-  let newElem = document.createElement("li");
-  let img = document.createElement("img");
-
-  gallery.append(newElem);
-  newElem.classList.add("li-item-task2");
-  img.classList.add("img-item-task2");
-
-  img.src = elem.url;
-  img.alt = elem.alt;
-
-  newElem.append(img);
-});
+gallery.insertAdjacentHTML("beforeend", markup);
